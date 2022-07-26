@@ -39,7 +39,7 @@ router.delete('/:id',
         check('id').custom(existId),
         validateField
     ],
-usuariosDelete) ;
+usuariosDelete);
 
 
 
