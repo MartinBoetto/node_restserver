@@ -1,7 +1,7 @@
 const { response } = require('express');
 const User = require("../models/user");
 const bcryptjs = require('bcryptjs');
-const { generateJWT } = require('../helpers/JWT-generate');
+const { generateJWT } = require('../helpers/jwt-generate');
 
 const loginPost = async (req, res = response)=>{
     //ejemplo si quiero mandaer un cod de status distinto del 200
