@@ -29,6 +29,10 @@ const UserSchema = new Schema({
     google:{
         type: Boolean,
         default:false
+    },
+    uid:{
+        type:String,
+        require :true
     }
 
 });
@@ -37,8 +41,11 @@ const UserSchema = new Schema({
 //sobrescribo el metodo toJSON para sacar parametros q no quiero q viejen en la respuesta
 
 UserSchema.methods.toJSON = function(){
-    const {__v, password, ...userinfo} = this.toObject();
+    const {__v, password, _id, ...userinfo} = this.toObject();
+    userinfo.uid = _id;
     return userinfo;
 }
+
+
 
 module.exports = model('User',UserSchema);

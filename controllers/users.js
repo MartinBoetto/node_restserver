@@ -90,6 +90,8 @@ const usuariosDelete = async (req, res = response)=>{
     //ejemplo si quiero mandaer un cod de status distinto del 200
     //res,status(403).json({})
 
+    const uid = req.uid;
+    const {mail} = req.userLogued;
     //obtengo el id q viene en la URL /api/usuarios/10
     const id = req.params.id;
     //borra fisicamente
@@ -100,7 +102,9 @@ const usuariosDelete = async (req, res = response)=>{
     res.json({
         ok:true,
         msg:"Delete API by controller",
-        user
+        user,
+        uid,
+        mail
     });
 }
 
