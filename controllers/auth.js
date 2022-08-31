@@ -58,6 +58,7 @@ const loginPost = async (req, res = response)=>{
 const googleSignIn = async (req, res= response)=> {
     //const id_token = req.header('id_token');
     const {id_token } = req.body;
+    console.log('id_token', id_token);
     try{
 
         const {name, img, mail} = await googleVerify(id_token);
@@ -86,7 +87,7 @@ const googleSignIn = async (req, res= response)=> {
 
          //genero el jwt
          const newtoken = await generateJWT(usuario.id, usuario.mail);
-
+        console.log('Nuevo Token', newtoken);
         res.json({
             msg: "Nuevo Token de Google",
             newtoken,
@@ -94,7 +95,7 @@ const googleSignIn = async (req, res= response)=> {
         })
     }
     catch(err){
-        json.status(400).json({
+        return res.status(400).json({
             ok:false,
             msg:'El token no se pudo verificar'
         })

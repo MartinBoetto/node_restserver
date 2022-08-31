@@ -9,6 +9,8 @@ class Server {
         this.port = process.env.PORT
         this.usuariosPath= '/api/usuarios';
         this.authPath='/api/auth';
+        this.categoriasPath = '/api/categorias';
+        this.productosPath = '/api/productos';
 
         //Middleware
         this.middleware();
@@ -40,6 +42,8 @@ class Server {
         //armo la ruta para api/usuarios q apute al user.js
         this.app.use(this.authPath, require('../routes/auth.js'));
         this.app.use(this.usuariosPath, require('../routes/user.js'));
+        this.app.use(this.categoriasPath, require('../routes/categories.js'));
+        this.app.use(this.productosPath, require('../routes/products.js'))
         
     }
 

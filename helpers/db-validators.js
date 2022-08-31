@@ -1,5 +1,7 @@
 const Role = require('../models/role');
 const User = require("../models/user");
+const Category = require("../models/category");
+const Product = require('../models/product');
 
 
 const isValidRol = async (role = '') =>{
@@ -32,8 +34,39 @@ const existId = async (id) =>{
     }
 }
 
+const existCategoryId = async (id) =>{
+
+    //try{
+        console.log('entro:',  id);
+        const existId= await Category.findById(id);
+        if(!existId){
+            throw new Error(`El id  no existe existe`);
+        }
+    //}
+    /*catch(err){
+        throw new Error(`El formato de Id no es valido`); 
+    }*/
+}
+
+const existProductId = async (id) =>{
+
+    //try{
+        console.log('entro:',  id);
+        const existId= await Product.findById(id);
+        if(!existId){
+            throw new Error(`El id  no existe existe`);
+        }
+    //}
+    /*catch(err){
+        throw new Error(`El formato de Id no es valido`); 
+    }*/
+}
+
+
 module.exports={
     isValidRol,
     existEmail,
-    existId
+    existId,
+    existCategoryId,
+    existProductId
 }
