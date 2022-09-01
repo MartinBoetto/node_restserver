@@ -1,0 +1,27 @@
+ZOOM DANTE
+Ingles Academia Lunes y Miercoles 18hs
+ID: 858 327 1006
+PASS: INGLES
+
+Ingles Escuela Martes 10:30
+ID:975 9413 9600
+PASS: cuenta2SJ
+
+Italiano Miercoles 9hs
+ID:916 3293 3523
+PASS: cuenta3SJ
+-------------------------------------------------------------------------------------
+
+ZOOM LORENZO
+Ingles Academia Martes y jueves 10hs
+ID: 519 600 4989
+PASS: elc2021
+
+Italiano Lunes 10 hs
+ID: 916 3293 3523
+PASS: cuenta3SJ
+
+Ingles Escuela Martes 11hs
+ID: 979 5449 3815
+PASS: cuenta1SJ
+
